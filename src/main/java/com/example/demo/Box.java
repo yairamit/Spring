@@ -1,2 +1,2 @@
-package com.example.demo;public class Box {
+package com.example.demo;public interface Box {
 }

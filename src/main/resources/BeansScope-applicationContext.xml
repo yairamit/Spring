@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- load the properties file: Boxes.properties -->
+	<context:property-placeholder location="classpath:Boxes.properties"/>
+
+    <!-- Define your beans here -->
+
+	<bean id="mySentence"
+		  class="com.example.demo.wisdomSentences">
+
+	</bean>
+
+	<bean id ="myVoulnteer"
+		  class="com.example.demo.Voulnteer">
+		<property name="sentence" ref="mySentence"></property>
+		<property name="address" value="${foo.address}"/>
+
+	</bean>
+	<bean id ="newBox"
+		  class="com.example.demo.WoodBox">
+
+	</bean>
+</beans>
+
+
+
+
+
